@@ -6,6 +6,7 @@ using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Windows.Media.Imaging;
 
 #endregion
 
@@ -15,19 +16,26 @@ namespace SetpValue
     {
         public Result OnStartup(UIControlledApplication a)
         {
+            string assemblyName = Assembly.GetExecutingAssembly().Location;
+            string path = System.IO.Path.GetDirectoryName(assemblyName);
+
             string tabName = "PERI R";
-            string panelName = "Info";
+            string panelName = "Input";
 
             a.CreateRibbonTab(tabName);
 
-            // Create PERI R custom tab
+            // Create PERI R tab
             var panel = a.CreateRibbonPanel(tabName, panelName);
 
             // Create button and assign function to it
-            var button1 = new PushButtonData("Info", "Set NOTE" + "\r" + "Parameters",
-                Assembly.GetExecutingAssembly().Location, "SetpValue.Command");
-            var btn1 = panel.AddItem(button1) as PushButton;
+            PushButtonData btnData1 = new PushButtonData("Set parameter value", "Set value", assemblyName, "SetpValue.Command");
+            PushButtonData btnData2 = new PushButtonData("Info", "Info", assemblyName, "SetpValue.Info");
 
+            btnData1.Image = new BitmapImage(new Uri(path + @"\icons8-key-16.png"));
+            btnData2.Image = new BitmapImage(new Uri(path + @"\icons8-support-16.png"));
+
+            panel.AddStackedItems(btnData1, btnData2);
+            panel.AddSeparator();
 
             return Result.Succeeded;
         }
