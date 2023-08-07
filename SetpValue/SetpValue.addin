@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command SetpValue</Text>
+    <Description>Some description for SetpValue</Description>
+    <Assembly>SetpValue.dll</Assembly>
+    <FullClassName>SetpValue.Command</FullClassName>
+    <ClientId>e1f7fb22-1478-4f3e-ba4b-e58472e25f37</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application SetpValue</Name>
+    <Assembly>SetpValue.dll</Assembly>
+    <FullClassName>SetpValue.App</FullClassName>
+    <ClientId>c6ae30da-c9b0-4e38-9ea2-ec08c45baaea</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
