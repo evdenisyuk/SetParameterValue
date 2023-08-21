@@ -8,4 +8,22 @@
     <VendorId>com.typepad.thebuildingcoder</VendorId>
     <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
   </AddIn>
+	<AddIn Type="Command">
+		<Text>Command SetpValue</Text>
+		<Description>Set Value</Description>
+		<Assembly>SetpValue.dll</Assembly>
+		<FullClassName>SetpValue.Command</FullClassName>
+		<ClientId>465C3CED-5260-4879-B86D-FB10AAE450EE</ClientId>
+		<VendorId>com.typepad.thebuildingcoder</VendorId>
+		<VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+	</AddIn>
+	<AddIn Type="Command">
+		<Text>Command SetpValue</Text>
+		<Description>Delete Element</Description>
+		<Assembly>SetpValue.dll</Assembly>
+		<FullClassName>SetpValue.Delete</FullClassName>
+		<ClientId>2B146AD3-45CA-4A74-A625-8C54DE402FC0</ClientId>
+		<VendorId>com.typepad.thebuildingcoder</VendorId>
+		<VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+	</AddIn>
 </RevitAddIns>

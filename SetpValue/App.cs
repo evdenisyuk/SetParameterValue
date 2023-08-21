@@ -28,13 +28,17 @@ namespace SetpValue
             var panel = a.CreateRibbonPanel(tabName, panelName);
 
             // Create button and assign function to it
-            PushButtonData btnData1 = new PushButtonData("Set parameter value", "Set value", assemblyName, "SetpValue.Command");
+            PushButtonData btnData1 = new PushButtonData("Set parameter value", "Set Value", assemblyName, "SetpValue.Command");
             PushButtonData btnData2 = new PushButtonData("Info", "Info", assemblyName, "SetpValue.Info");
+            PushButtonData btnData3 = new PushButtonData("Delete dublicated instances", "Prune Duplicates", assemblyName, "SetpValue.Detele");
 
             btnData1.Image = new BitmapImage(new Uri(path + @"\icons8-key-16.png"));
-            btnData2.Image = new BitmapImage(new Uri(path + @"\icons8-support-16.png"));
+            btnData2.LargeImage = new BitmapImage(new Uri(path + @"\icons8-support-16.png"));
+            btnData3.Image = new BitmapImage(new Uri(path + @"\icons8-delete-16.png"));
 
-            panel.AddStackedItems(btnData1, btnData2);
+
+            panel.AddItem(btnData2);
+            panel.AddStackedItems(btnData1, btnData3);
             panel.AddSeparator();
 
             return Result.Succeeded;

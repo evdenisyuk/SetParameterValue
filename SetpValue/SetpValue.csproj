@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Detele.cs" />
     <Compile Include="Info.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -70,6 +71,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\icons8-delete-16.png" />
     <Content Include="img\icons8-key-16.png" />
     <Content Include="img\icons8-support-16.png" />
     <Content Include="SetpValue.addin">
